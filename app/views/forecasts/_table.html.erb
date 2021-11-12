@@ -1,0 +1,23 @@
+<p><% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<p>[Result cached: <%= @address_cached ? "√" : "x" %>]
+<table>
+  <tbody id='forecasts'>
+      <% if @current_period %>
+
+    <% @current_period.attributes.each_pair do |a,v| %>
+    <tr>
+        <td><%= a.capitalize %></td>
+        <td><%= v %></td>
+      </tr>
+        <% end %>
+
+        <% end %>
+
+      </tr>
+  </tbody>
+</table>

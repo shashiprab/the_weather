@@ -1,0 +1,5 @@
+<%= form_tag("/forecasts", method: :get, remote: :true) do %>
+  <%= label_tag(:address, "Address:") %>
+  <%= text_field_tag(:address) %>
+  <%= submit_tag("Get Forecast") %>
+<% end %>
